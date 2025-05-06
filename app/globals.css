@@ -16,6 +16,7 @@
   --color-lightOrange: #fca99b;
   --color-shop_light_green: #3b9c3c;
   --color-deal-bg: #f1f3f8;
+  --font-ibm-plex-sans-thai: "IBM Plex Sans Thai", sans-serif;
 }
 
 :root {
@@ -131,9 +132,11 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    font-family: var(--font-ibm-plex-sans-thai);
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-ibm-plex-sans-thai);
   }
   .hoverEffect {
     @apply transition-all duration-300 ease-in-out;

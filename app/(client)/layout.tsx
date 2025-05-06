@@ -3,12 +3,12 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
-import { Kanit } from "next/font/google";
+import { IBM_Plex_Sans_Thai } from "next/font/google";
 
-const kanit = Kanit({
-  subsets: ["latin"],
+const ibmPlexSansThai = IBM_Plex_Sans_Thai({
+  subsets: ["latin", "thai"],
   weight: ["400", "700"],
-  variable: "--font-kanit",
+  variable: "--font-ibm-plex-sans-thai",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`antialiased ${kanit.className}`}>
+        <body className={`antialiased ${ibmPlexSansThai.className}`}>
           <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-1">{children}</main>

@@ -1,8 +1,8 @@
-import { Kanit } from "next/font/google";
-const kanit = Kanit({
-  subsets: ["latin"],
+import { IBM_Plex_Sans_Thai } from "next/font/google";
+const ibmPlexSansThai = IBM_Plex_Sans_Thai({
+  subsets: ["latin", "thai"],
   weight: ["400", "700"],
-  variable: "--font-kanit",
+  variable: "--font-ibm-plex-sans-thai",
 });
 
 const RootLayout = ({
@@ -12,7 +12,9 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={`antialiased ${kanit.className}`}>{children}</body>
+      <body className={`antialiased ${ibmPlexSansThai.className}`}>
+        {children}
+      </body>
     </html>
   );
 };
